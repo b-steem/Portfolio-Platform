@@ -60,12 +60,18 @@ dlldata.c
 *.tmp
 *.tmp_proj
 *.log
+*.logs
 *.vspscc
 *.vssscc
 .builds
 *.pidb
 *.svclog
 *.scc
+
+# IDE
+.vscode/
+.vs/
+.idea/
 
 # Chutzpah Test files
 _Chutzpah*
@@ -182,6 +188,8 @@ ClientBin/
 orleans.codegen.cs
 
 /node_modules
+dist/
+node_modules/
 
 # RIA/Silverlight projects
 Generated_Code/
@@ -197,6 +205,10 @@ UpgradeLog*.htm
 # SQL Server files
 *.mdf
 *.ldf
+
+# OS
+.DS_Store
+Thumbs.db
 
 # Business Intelligence projects
 *.rdl.data
@@ -231,3 +243,12 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+
+# Test output
+coverage/
+playwright-report/
+test-results/
+
+# Environment
+.env
+.env.*
