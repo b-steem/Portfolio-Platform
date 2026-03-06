@@ -1,21 +1,30 @@
 <app-navbar></app-navbar>
 
-<section id="home" class="hero-section">
+<section id="home" class="hero section">
   <div class="container hero__content">
-    <p class="eyebrow">Hi, I'm</p>
-    <div class="hero__divider"></div>
+    @if (isLoadingProfile) {
+      <p class="hero__status">Loading profile...</p>
+    } @else if (profileErrorMessage) {
+      <p class="hero__status hero__status--error">{{ profileErrorMessage }}</p>
+    } @else if (profile) {
+      <p class="eyebrow">Hi, I'm</p>
+      <div class="hero__divider"></div>
 
-    <h1 class="section-title">Bennet Steem</h1>
+      <h1 class="section-title">{{ profile.name }}</h1>
 
-    <p class="section-subtitle">
-      Computing science student focused on full-stack development, AI-driven software,
-      clean architecture, testing, and practical impact.
-    </p>
+      <p class="section-subtitle">
+        {{ profile.headline }}
+      </p>
 
-    <div class="hero__actions">
-      <a class="btn btn-primary" href="#projects">View Projects</a>
-      <a class="btn btn-secondary" href="#contact">Contact Me</a>
-    </div>
+      <p class="hero__about">
+        {{ profile.about }}
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-secondary" href="#contact">Contact Me</a>
+      </div>
+    }
   </div>
 </section>
 

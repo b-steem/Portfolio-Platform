@@ -32,13 +32,17 @@
   justify-content: center;
 }
 
-.projects {
-  text-align: center;
+.hero__status {
+  color: var(--color-text-muted);
 }
 
-.projects__grid {
-  margin-top: 3.5rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+.hero__status--error {
+  color: #f87171;
+}
+
+.hero__about {
+  max-width: 760px;
+  color: var(--color-text-muted);
+  line-height: 1.8;
+  margin: 0;
 }

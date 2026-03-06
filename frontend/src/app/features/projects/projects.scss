@@ -59,6 +59,15 @@
   color: var(--color-accent);
 }
 
+.projects__status {
+  margin-top: 2rem;
+  color: var(--color-text-muted);
+}
+
+.projects__status--error {
+  color: #f87171;
+}
+
 @media (max-width: 900px) {
   .projects__grid {
     grid-template-columns: 1fr;
