@@ -4,16 +4,20 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-// builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen();
 // builder.Services.AddOpenApi();
-
 builder.Services.AddInfrastructure();
 
 var app = builder.Build();
 
-app.MapControllers();
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
-app.MapGet("/", () => "Portfolio API running");
+app.MapControllers();
+app.MapGet("/", () => Results.Ok("Portfolio API running"));
 
 app.Run();
 
