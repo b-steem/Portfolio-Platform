@@ -1,6 +1,9 @@
 import { test, expect } from '@playwright/test';
 
-test('home page loads', async ({ page }) => {
-  await page.goto('http://localhost:4200');
-  await expect(page.locator('body')).toBeVisible();
+test('hero section displays profile information', async ({ page }) => {
+  await page.goto('/');
+
+  const heroSection = page.locator('#home');
+  await expect(heroSection.getByRole('heading', { name: 'Bennet Steem' })).toBeVisible();
+  await expect(page.locator('#home')).toBeVisible();
 });
