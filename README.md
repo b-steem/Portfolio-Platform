@@ -37,3 +37,11 @@ dotnet run
 cd frontend
 ng serve
 ```
+
+## Testing Strategy
+
+I used a layered testing approach:
+
+- **Backend unit tests** verify service logic and business rules in isolation
+- **Backend integration tests** verify API endpoints and HTTP responses
+- **Frontend end-to-end tests** use Playwright to validate real user flows through the UI
