@@ -26,7 +26,14 @@ Week 6 E2E tests in progress.
 
 ## Running the app
 
+### Backend
+```bash
+cd backend/src/Portfolio.Api
+dotnet run
+```
+
 ### Frontend
 ```bash
 cd frontend
 ng serve
+```
