@@ -34,4 +34,10 @@ export class Projects implements OnInit {
       }
     });
   }
+
+  reloadProjects(): void {
+    this.isLoading = true;
+    this.errorMessage = '';
+    this.loadProjects();
+  }
 }

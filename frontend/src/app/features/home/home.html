@@ -3,9 +3,14 @@
 <section id="home" class="hero section">
   <div class="container hero__content">
     @if (isLoadingProfile) {
-      <p class="hero__status">Loading profile...</p>
+      <div class="skeleton skeleton--text short"></div>
     } @else if (profileErrorMessage) {
-      <p class="hero__status hero__status--error">{{ profileErrorMessage }}</p>
+      <div class="profile__fallback">
+        <p class="profile__status profile__status--error">{{ profileErrorMessage }}</p>
+        <button class="btn btn-secondary" type="button" (click)="reloadProjects()">
+        Try Again
+        </button>
+      </div>
     } @else if (profile) {
       <p class="eyebrow">Hi, I'm</p>
       <div class="hero__divider"></div>

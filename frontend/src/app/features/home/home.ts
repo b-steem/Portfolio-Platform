@@ -46,4 +46,10 @@ export class Home implements OnInit {
       }
     });
   }
+
+  reloadProjects(): void {
+    this.isLoadingProfile = true;
+    this.profileErrorMessage = '';
+    this.loadProfile();
+  }
 }

@@ -4,9 +4,22 @@
         <h2 class="section-title">Selected Work</h2>
 
         @if (isLoading) {
-            <p class="projects__status">Loading projects...</p>
+            <div class="projects__grid">
+                @for (item of [1,2,3]; track item) {
+                <article class="project-card project-card--skeleton">
+                    <div class="skeleton skeleton--title"></div>
+                    <div class="skeleton skeleton--text"></div>
+                    <div class="skeleton skeleton--text short"></div>
+                </article>
+                }
+            </div>
         } @else if (errorMessage) {
-            <p class="projects__status projects__status--error">{{ errorMessage }}</p>
+            <div class="projects__fallback">
+                <p class="projects__status projects__status--error">{{ errorMessage }}</p>
+                <button class="btn btn-secondary" type="button" (click)="reloadProjects()">
+                Try Again
+                </button>
+            </div>
         } @else {
             <div class="projects__grid">
                 @for (project of projects; track project.id) {
