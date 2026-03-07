@@ -45,3 +45,15 @@ I used a layered testing approach:
 - **Backend unit tests** verify service logic and business rules in isolation
 - **Backend integration tests** verify API endpoints and HTTP responses
 - **Frontend end-to-end tests** use Playwright to validate real user flows through the UI
+
+## Continuous Integration Pipeline
+
+This project uses GitHub Actions to automatically validate changes on push and pull request.
+
+The CI workflow:
+- restores and builds the ASP.NET Core backend
+- runs backend unit and integration tests
+- installs and builds the Angular frontend
+- runs Playwright end-to-end tests against the running full-stack application
+
+This helps ensure code quality and protects the main branch from regressions.
