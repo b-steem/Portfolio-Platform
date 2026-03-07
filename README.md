@@ -22,7 +22,7 @@ A full-stack portfolio platform built with Angular and ASP.NET Core to showcase 
 - `backend/tests/Portfolio.IntegrationTests` integration tests
 
 ## Status
-Week 2 backend domain in progress.
+Week 6 E2E tests in progress.
 
 ## Running the app
 
