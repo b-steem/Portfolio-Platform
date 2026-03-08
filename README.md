@@ -2,6 +2,9 @@
 
 A full-stack portfolio platform built with Angular and ASP.NET Core to showcase projects, software development, testing strategy, and CI/CD practices.
 
+## Deployment
+https://portfolio-platform-b-steems-projects.vercel.app/
+
 ## Tech Stack
 - Angular
 - TypeScript
