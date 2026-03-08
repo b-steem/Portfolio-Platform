@@ -6,12 +6,12 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("Frontend", policy =>
     {
-        // policy.WithOrigins(
-        //         "http://localhost:4200",
-        //         "http://127.0.0.1:4200",
-        //         "https://portfolio-platform-two.vercel.app"
-        //     )
-        policy.AllowAnyOrigin()
+        policy.WithOrigins(
+                "http://localhost:4200",
+                "http://127.0.0.1:4200",
+                "https://portfolio-platform-b-steems-projects.vercel.app",
+                "https://portfolio-platform-two.vercel.app"
+            )
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
@@ -38,10 +38,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors("Frontend");
-
 app.UseExceptionHandler("/error");
 
+app.UseHttpsRedirection();
+app.UseCors("Frontend");
 app.MapControllers();
 app.MapGet("/", () => Results.Ok("Portfolio API running"));
 
