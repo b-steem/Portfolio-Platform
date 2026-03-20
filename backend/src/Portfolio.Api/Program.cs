@@ -10,7 +10,8 @@ builder.Services.AddCors(options =>
                 "http://localhost:4200",
                 "http://127.0.0.1:4200",
                 "https://portfolio-platform-b-steems-projects.vercel.app",
-                "https://portfolio-platform-two.vercel.app"
+                "https://portfolio-platform-two.vercel.app",
+                "https://bennet-steem.vercel.app"
             )
             .AllowAnyHeader()
             .AllowAnyMethod();

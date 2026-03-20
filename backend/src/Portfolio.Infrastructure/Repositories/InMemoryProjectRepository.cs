@@ -25,7 +25,7 @@ public class InMemoryProjectRepository : IProjectRepository
             Title = ".NET Portfolio Platform",
             Description = "A full-stack portfolio platform built with Angular and ASP.NET Core.",
             TechStack = ["Angular", "ASP.NET Core", "C#", "Playwright"],
-            GitHubUrl = "https://github.com/b-steem/portfolio-platform",
+            GitHubUrl = "https://github.com/b-steem/bennet-steem",
             LiveUrl = "",
             ImageUrl = "",
             Featured = true,
